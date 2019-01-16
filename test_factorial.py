@@ -23,7 +23,7 @@ class Test_factorial(unittest.TestCase):
 
     def test_fraction(self):
         fact = factorial(0.5)
-        self.assertEquals(fact, 1)
+        self.assertEquals(fact, 0)
 
     def test_factorial_two_confirm(self):
         fact = factorial(2)
@@ -32,7 +32,18 @@ class Test_factorial(unittest.TestCase):
     def test_factorial_one_confirm(self):
         fact = factorial(2)
         self.assertEquals(fact, 2)
-        
+
+    def test_non_int(self):
+        fact = factorial("p")
+        self.assertEquals(fact, 0)
+
+    def test_floats(self):
+        fact = factorial(6.9)
+        self.assertEquals(fact, 0
+        )
+    def test_equations(self):
+        fact = factorial(1*2)
+        self.assertEquals(fact, 2)
 
 
 
